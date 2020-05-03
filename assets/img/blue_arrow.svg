@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="10px" viewBox="0 0 6 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>blue arrow</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Elections" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="News-carousels" transform="translate(-338.000000, -75.000000)" fill="#1F9EE1" fill-rule="nonzero">
+            <g id="Group-14" transform="translate(292.000000, 72.000000)">
+                <path d="M50.1901824,8.0000015 L46.2195704,4.21871877 C45.9268131,3.93991914 45.9268131,3.48790544 46.219551,3.20912433 C46.3618977,3.07353073 46.552313,3 46.7496621,3 C46.9470113,3 47.1374266,3.07353073 47.2797538,3.2091058 L51.780432,7.49520623 C52.0731893,7.77400587 52.0731893,8.22601957 51.780432,8.50481921 L47.2797441,12.7909289 C46.986989,13.0696919 46.5123608,13.0696919 46.219596,12.7909196 C45.9268386,12.51212 45.9268386,12.0601063 46.2195955,11.7813071 L50.1901824,8.0000015 Z" id="blue-arrow"></path>
+            </g>
+        </g>
+    </g>
+</svg>

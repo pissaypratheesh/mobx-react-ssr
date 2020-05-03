@@ -1,0 +1,39 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "es2015",
+    "stage-0",
+    "react"
+  ],
+  "retainLines": true,
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "@containers": "./src/containers",
+        "@components": "./src/components",
+        "@pages": "./src/pages",
+        "@services": "./src/utils/services",
+        "@routes": "./routes",
+        "@router": "./routes",
+        "@constants": "./src/sharedConfig/constants",
+        "@lib": "./src/helpers/lib",
+        "@config": "./src/config",
+        "@stores": "./src/store",
+        "@helpers" : "./src/helpers",
+        "@utils": "./src/helpers/utility"
+      }
+    }],
+    "transform-runtime",
+    "syntax-dynamic-import",
+    "react-hot-loader/babel",
+    "react-loadable/babel",
+    "transform-decorators-legacy",
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": true }]
+  ]
+}

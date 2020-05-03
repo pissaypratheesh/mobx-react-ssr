@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="26px" viewBox="0 0 26 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>play</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Elections" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="News-carousels" transform="translate(-255.000000, -653.000000)" fill-rule="nonzero">
+            <g id="Group-30" transform="translate(248.000000, 560.000000)">
+                <g id="play" transform="translate(8.000000, 94.000000)">
+                    <path d="M12,0 C5.37225,0 0,5.37225 0,12 C0,18.62775 5.37225,24 12,24 C18.62775,24 24,18.62775 24,12 C24,5.37225 18.62775,0 12,0 Z" id="Shape" stroke="#FFFFFF" stroke-width="1.5" fill="#FB1048"></path>
+                    <path d="M9.44652504,17.2305571 L17.2325171,12.7814188 C17.6640828,12.5348099 17.8140198,11.9850407 17.5674108,11.553475 C17.4876805,11.4139468 17.3720452,11.2983115 17.2325171,11.2185812 L9.44652504,6.76944288 C9.01495934,6.52283391 8.46519014,6.67277096 8.21858117,7.10433667 C8.14087379,7.24032459 8.1,7.39423747 8.1,7.55086171 L8.1,16.4491383 C8.1,16.9461946 8.50294373,17.3491383 9,17.3491383 C9.15662424,17.3491383 9.31053712,17.3082645 9.44652504,17.2305571 Z" id="Shape" fill="#FFFFFF"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,41 @@
+{
+  "name": "Fly Goldfinch",
+  "short_name": "Goldfinch",
+  "start_url": "/?mode=pwa&utm_source=homescreen&utm_medium=a2hs",
+  "display": "standalone",
+  "gcm_sender_id": "464053445211",
+  "theme_color": "#f2f2f2",
+  "background_color": "#f2f2f2",
+  "crossOrigin":"use-credentials",
+  "description": "Travel across world",
+  "related_applications": [{
+    "platform": "abcd",
+    "id": "abcd"
+  }],
+  "permissions": [
+    "cookies",
+    "*://*.dailyhunt.in"
+  ],
+  "icons": [
+    {
+      "src": "/assets/img/icon-192x192.png?mode=pwa",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-256x256.png?mode=pwa",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-384x384.png?mode=pwa",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/icon-512x512.png?mode=pwa",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

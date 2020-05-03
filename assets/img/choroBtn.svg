@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="4px" height="6px" viewBox="0 0 4 6" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>Back Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="V1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Headlines-" transform="translate(-304.000000, -224.000000)" fill="#3979C3">
+            <g id="News-text-thumb" transform="translate(4.000000, 132.000000)">
+                <g id="Group-2" transform="translate(266.000000, 90.000000)">
+                    <path d="M34.0020757,4.99374234 L34,4.99581809 L36.9916666,7.98748468 L37.5899999,7.38915136 L35.1945909,4.99374234 L37.5899999,2.59833332 L36.9916666,2 L34,4.9916666 L34.0020757,4.99374234 Z" id="Back-Arrow" transform="translate(35.795000, 4.993742) scale(-1, 1) translate(-35.795000, -4.993742) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
