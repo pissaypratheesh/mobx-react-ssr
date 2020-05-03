@@ -1,9 +1,7 @@
 React+Mobx server side render boilerplate with ES2015, Express.js, and Webpack.
 
-## 更新
-
-- Babel7版本请切换分支到babel-7
-- 或者访问[https://github.com/Tecode/react-mobx-ssr/tree/babel-7](https://github.com/Tecode/react-mobx-ssr/tree/babel-7)
+- Babel7
+- source: [https://github.com/Tecode/react-mobx-ssr/tree/babel-7](https://github.com/Tecode/react-mobx-ssr/tree/babel-7)
 
 ## Technologies
 
