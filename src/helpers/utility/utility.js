@@ -8,8 +8,9 @@ var _ = require('underscore');
 var cookies = require('js-cookie');
 var cookie = require('cookie');
 
-_.mixin(require('../client/src/lib/mixins'));
-var uaParser =  isBrowser && navigatorSupported  && _.at(window,'navigator.userAgent') && require('ua-parser-js')(window.navigator.userAgent);
+_.mixin(require('./mixins'));
+
+//var uaParser =  isBrowser && navigatorSupported  && _.at(window,'navigator.userAgent') && require('ua-parser-js')(window.navigator.userAgent);
 
 //url(optional): pass url or by defaults picks from URL,
 //params(optional): query params obj,

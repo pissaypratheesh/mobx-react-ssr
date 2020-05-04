@@ -3,6 +3,7 @@ import Loadable from 'react-loadable';
 import {Route, Switch} from 'react-router-dom';
 import NotFound from '../containers/NotFound';
 import NavBar from '../components/NavBar';
+const l = console.log;
 // import Article from '../components/Article';
 var _ = require('underscore');
 
@@ -22,11 +23,10 @@ export class AppLayout extends React.Component {
   // };
 
   render() {
-    let k = _.map([1,2],(a)=>a);
-    console.log("In applayout",k);
+    l("--prahteeeh-->",this.props);
     return (
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route path="/" component={Home} />
           <Route path="/article" component={Article} />
           <Route path="*" component={NotFound} />
         </Switch>

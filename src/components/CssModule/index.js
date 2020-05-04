@@ -9,11 +9,11 @@ var _ = require('underscore');
 export default class CssModule extends Component {
   render() {
     let k = _.map([1,2],(a)=>a);
-    console.log("in CSS MODULE",k);
+    console.log("pratheesh CSS MODULE",k);
 //    return <Home/>
     return (
       <div>
-        <span >MIKOLC</span>
+        <span >SanmithaPratheesh will be marreid</span>
         Hello world! this is cssModules file
         <span>Store: {this.props.appStore.name}</span>
       </div>

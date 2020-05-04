@@ -4,18 +4,21 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 var AssetsPlugin = require('assets-webpack-plugin')
-var assetsPluginInstance = new AssetsPlugin({metadata: {version: 123}})
+var assetsPluginInstance = new AssetsPlugin()
 const isDev = process.env.NODE_ENV !== 'production';
 
 //'polyfill':'babel-polyfill', //this is removed from entry
 module.exports = {
   target: 'web',
-  entry: { main:'./src/client.js'},
+  entry: isDev ?  [
+    'babel-polyfill',
+    './src/client.js'
+  ]: { main:'./src/client.js'},
   output: {
     publicPath: '/',
     path: resolve(__dirname, '..', 'build'),
-    filename: '[name].[hash].js',  //chunkhash
-    chunkFilename: isDev ? '[name].chunk.js' : '[name].[hash:8].chunk.js'
+    filename: !isDev ? '[name].[chunkhash].js' : '[name].bundle.js',//'[name].[chunkhash].js',  //chunkhash
+    chunkFilename: isDev ? '[name].chunk.js' : '[name].[chunkhash].chunk.js'
   },
   module: {
     rules: [
@@ -126,10 +129,32 @@ module.exports = {
     modules: [resolve(__dirname, '../src/'), 'node_modules'],
     extensions: ['.js', '.jsx', '.scss', '.less']
   },
-  optimization: {
+  optimization: isDev ? {splitChunks: {
+      chunks: 'all'
+    }} : {
     runtimeChunk: true,
     splitChunks: {
-      chunks: 'all'
+      chunks: 'all',
+      maxInitialRequests: Infinity,
+      minSize: 0,
+      cacheGroups: {
+        reactVendor: {
+          test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+          name: "reactvendor"
+        },
+        mobxVendor: {
+          test: /[\\/]node_modules[\\/](mobx|mobx-react)[\\/]/,
+          name: "mobxVendor"
+        },
+        intlVendor: {
+          test: /[\\/]node_modules[\\/](intl)[\\/]/,
+          name: "intlVendor"
+        },
+        underscoreVendor: {
+          test: /[\\/]node_modules[\\/](underscore)[\\/]/,
+          name: "underscoreVendor"
+        },
+      }
     }
   },
   stats: {

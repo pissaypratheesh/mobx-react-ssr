@@ -1,1 +1,1 @@
-{"Article":{"js":"/Article.3002dd01.chunk.js"},"Home":{"js":"/Home.3002dd01.chunk.js"},"vendors~main":{"js":"/vendors~main.3002dd01.chunk.js"},"main":{"js":"/main.3002dd01.chunk.js"},"":{"license":"/vendors~main.3002dd01.chunk.js.LICENSE","html":"/server.html","json":"/my-manifest.json"},"metadata":{"version":123}}
+{"Article":{"js":"/Article.chunk.js"},"Home":{"js":"/Home.chunk.js"},"main":{"js":"/main.bundle.js"},"vendors~main":{"js":"/vendors~main.chunk.js"},"":{"html":"/client.html","json":["/hot-update.5e517f.json","/hot-update.4341f9.json"]}}

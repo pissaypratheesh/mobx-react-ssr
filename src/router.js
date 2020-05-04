@@ -11,7 +11,7 @@ export default class Routers extends Component {
 {/*
         <Route path="/login" name="login" component={LoginForm} />
 */}
-        <Route path="/" name="home" component={AppLayout} />
+        <Route path="/"  name="home" component={AppLayout} />
       </Switch>
     );
   }
