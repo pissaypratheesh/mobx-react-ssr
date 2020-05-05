@@ -142,6 +142,24 @@ module.exports = {
           test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
           name: "reactvendor"
         },
+
+        reactrouterVendor: {
+          test: /[\\/]node_modules[\\/](react-router)[\\/]/,
+          name: "reactroutervendor"
+        },
+
+
+        reactrouterdomVendor: {
+          test: /[\\/]node_modules[\\/](react-router-dom)[\\/]/,
+          name: "reactrouterdomvendor"
+        },
+
+
+        axiosVendor: {
+          test: /[\\/]node_modules[\\/](axios)[\\/]/,
+          name: "axiosvendor"
+        },
+
         mobxVendor: {
           test: /[\\/]node_modules[\\/](mobx|mobx-react)[\\/]/,
           name: "mobxVendor"
@@ -153,6 +171,14 @@ module.exports = {
         underscoreVendor: {
           test: /[\\/]node_modules[\\/](underscore)[\\/]/,
           name: "underscoreVendor"
+        },
+        polyfillVendor: {
+          test: /[\\/]node_modules[\\/](babel-polyfill)[\\/]/,
+          name: "polyfillVendor"
+        },
+        urlqueryVendor: {
+          test: /[\\/]node_modules[\\/](query-string|append-query|url)[\\/]/,
+          name: "queryurlVendor"
         },
       }
     }

@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import { toJS,extendObservable } from "mobx"
 import { inject, observer } from "mobx-react";
 const isBrowser = typeof window !== 'undefined'
 const queryString = require('query-string')
 var _ = require('underscore');
-_.mixin(require('@utils/mixins'));
+_ = _.mixin(require('../../helpers/utility/mixins'));
 
 export default function DataWrapper(Component) {
 
@@ -22,9 +23,10 @@ export default function DataWrapper(Component) {
             let params = _.at(this, 'props.match.params');
             let query = _.at(this, 'props.location.search');
             params && (params.url = _.at(this,'props.match.url'));
+            _.deepExtend(params,toJS(this.store));
             query && (params.query = queryString.parse(query.split("?")[1]));
             if (url && pattern && params) {
-              this.store.fetchData(url, pattern, params);
+              this.store.fetchData && this.store.fetchData(url, pattern, params);
             }
           }
         }
@@ -40,6 +42,7 @@ export default function DataWrapper(Component) {
         let params = _.at(nextProps,'match.params');
         params.url = _.at(nextProps,'match.url');
         let query = _.at(nextProps,'location.search');
+        _.deepExtend(params,toJS(this.store));
         query && (params.query = queryString.parse(query.split("?")[1]));
         if(url && pattern && params) {
           this.store.fetchData(url, pattern, params);

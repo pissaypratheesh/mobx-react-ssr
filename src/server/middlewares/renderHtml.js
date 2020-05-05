@@ -11,6 +11,7 @@ import {toJS} from 'mobx';
 
 export default function(path, req) {
   allStore.miniStore = {name: 'PPPPP'};
+  allStore.appStore = req.store || allStore.appStore;
   const context = {};
   const componentHTML = (
     <Provider {...allStore}>

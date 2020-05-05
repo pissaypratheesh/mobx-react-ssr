@@ -1,14 +1,13 @@
 const isBrowser = typeof window !== 'undefined'
 const querystring = require('querystring');
-import { CtoSTimeout, StoSTimeout, isProduction} from '../config/constants.js';
+import { CtoSTimeout, StoSTimeout, isProduction,disableRetry} from '../config/constants.js';
 import axios from 'axios';
-import { json } from 'body-parser';
 var appendQuery = require('append-query')
 const queryString = require('query-string');
 var async = require('async-lite');
 var _ = require('underscore');
 var promiseToCallback = require('promise-to-callback')
-_.mixin(require('../helpers/utility/mixins'));
+_ = _.mixin(require('../helpers/utility/mixins'));
 var retry = 3;
 var defaultHeaders = {
   "Content-Type": "application/json",
@@ -60,10 +59,9 @@ function makeRequest(reqObj,callback) {
     let parsedQuery = isBrowser && window.location.search  
     let utm_medium = queryString.parse(parsedQuery).utm_medium
     let utm_channel = queryString.parse(parsedQuery).utm_channel
-    let showRelated = traffic_type(utm_medium,utm_channel) && traffic_type(utm_medium,utm_channel).showRelated
+    //let showRelated = traffic_type(utm_medium,utm_channel) && traffic_type(utm_medium,utm_channel).showRelated
     let utmParameter = fetchUtmFromUrl()
     params.url = appendQuery(params.url,utmParameter);
-    params.url = appendQuery(params.url,{showRelated:showRelated})
     if(isBrowser && (_.at(window,'__STATE.env.isCampaign'))){
       params.url = appendQuery(params.url,{campaign:true});
     }

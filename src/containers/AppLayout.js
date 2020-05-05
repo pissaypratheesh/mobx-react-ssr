@@ -7,16 +7,6 @@ const l = console.log;
 // import Article from '../components/Article';
 var _ = require('underscore');
 
-const Home = Loadable({
-  loader: () => import('../components/CssModule' /* webpackChunkName: 'Home' */),
-  loading: () => <p>Loading...</p>
-});
-
-const Article = Loadable({
-  loader: () => import('../components/Article' /* webpackChunkName: 'Article' */),
-  loading: () => <p>Loading...</p>
-});
-
 export class AppLayout extends React.Component {
   // static propTypes = {
   //   loading: PropTypes.bool.isRequired
@@ -26,8 +16,6 @@ export class AppLayout extends React.Component {
     l("--prahteeeh-->",this.props);
     return (
         <Switch>
-          <Route path="/" component={Home} />
-          <Route path="/article" component={Article} />
           <Route path="*" component={NotFound} />
         </Switch>
     );

@@ -2,9 +2,11 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import Loadable from 'react-loadable';
 import setupApiRoutes from './middlewares/api';
+import setupSSRRoutes from './middlewares/ssr/api'
 import logger from './logger';
 import development from './middlewares/development';
 import production from './middlewares/production';
+
 const path = require('path');
 
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
@@ -31,7 +33,6 @@ app.set('env', process.env.NODE_ENV);
 logger.info(`Application env: ${process.env.NODE_ENV}`);
 
 //Assets
-console.log("\n\n\n __dirname----->",__dirname,path.join(__dirname , '../../assets'))
 app.use('/assets',express.static(path.join(__dirname , '../../assets')));
 
 
@@ -42,6 +43,7 @@ app.use(bodyParser.json());
 
 // application routes
 setupApiRoutes(app);
+setupSSRRoutes(app);
 setupAppRoutes(app);
 
 if (HTTP_PORT) {

@@ -13,7 +13,8 @@ module.exports = {
     removeFalsyValues: removeFalsyValues,
     attachScript: attachScript,
     seperateScriptHtml:seperateScriptHtml,
-    deepClone:deepClone
+    deepClone:deepClone,
+    _:_
     //alterHtml:alterHtml,
 };
 

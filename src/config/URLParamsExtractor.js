@@ -13,8 +13,8 @@ _.mixin(require('@utils/mixins'));
 const URLParamsExtractor =  {
 
   article(params ,cb){
-    let url = [
-        {url:apiBasePattern + "detailsdirect/" + ((_.at(params,'newsiddetails') && _.isString(params.newsiddetails)) ? params.newsiddetails.split("-newsid-")[1] : 0) + "?langCode=" + (cookies.get('selectedLang') || lang) + "&edition=" + edition + (isLite ? "&lite=true" : ''), method: "get", params},
+    let url = params.details ? [] : [
+        {url: "https://api-news.dailyhunt.in/api/v100/constants", method: "get", params},
       ],
       updateFunction = "updateDetailsById";
       return cb({

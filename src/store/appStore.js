@@ -1,17 +1,30 @@
-import {observable, action} from 'mobx';
-import routeUrlMap from '@config/routeAPIMap'
-import {makeRequest} from '@helpers/makeRequest'
+const isBrowser = typeof window !== 'undefined'
 
-class AppStore {
+import {observable, action,extendObservable} from 'mobx';
+import routeUrlMap from '../config/routeAPIMap'
+import {makeRequest} from '@helpers/makeRequest'
+var _ = require('underscore');
+_ = _.mixin(require('../helpers/utility/mixins'))
+const l = console.log;
+
+export default class AppStore {
   @observable name = 'solo8969';
   @observable day = '2096';
+  @observable details = undefined;
   @action.bound
   log() {
-    console.log('mobx');
+   // console.log('mobx');
   }
 
   constructor(state) {
     let context = this;
+    (state = (!state || (state && _.isEmpty(state))) ?  (isBrowser ? _.at(window,'__INITIAL_STATE__.appStore') || {} : {}) : state);
+    if(_.isString(state)){
+      state = JSON.parse(state);
+    }
+    if(state) {
+      extendObservable(this, state);
+    }
   }
 
 
@@ -33,6 +46,7 @@ class AppStore {
 
     // Fetch in an array all the calls that need to be fired with its params and method
     routeUrlMap(params, _.extend({},params,context), function(dataToFetch){
+      l('\ndatttttttt-->',dataToFetch,url, pattern, params);
       if(!dataToFetch || _.isEmpty(dataToFetch.urlList) || ignoreInit){
 /*
         let fetchCallback1 = context.fetchDataCallbackMap.get(context.activeNavIndex);
@@ -81,7 +95,16 @@ class AppStore {
     });
   }
 
+  @action updateDetailsById(resp, url, params, dataToFetch,thisContext){
+    if(resp && resp[0]){
+      this.details = resp[0];
+    }
+    if(thisContext){
+      return this;
+    }
+  }
+
 
 }
 
-export default new AppStore();
+//export default new AppStore();
